@@ -24,7 +24,7 @@ export default function Login() {
   return (
     <main className="shell center">
       <form className="panel" onSubmit={onSubmit}>
-        <h1>Sign in</h1>
+        <h1>JWT Authentication</h1>
         <p className="muted small">Mock credential validation</p>
 
         <label htmlFor="username">Username</label>

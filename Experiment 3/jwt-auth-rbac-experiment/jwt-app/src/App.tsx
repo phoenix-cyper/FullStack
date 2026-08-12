@@ -6,7 +6,12 @@ import Dashboard from "./pages/Dashboard";
 import Content from "./pages/Content";
 import Admin from "./pages/Admin";
 import Unauthorized from "./pages/Unauthorized";
+import Posts from "./pages/Posts";
+<Route element={<ProtectedRoute permission="content:view" />}>
 
+<Route path="/posts" element={<Posts/>}/>
+
+</Route>
 export default function App() {
   const { ready, isAuthenticated } = useAuth();
   if (!ready) return <main className="shell center muted">Verifying token…</main>;

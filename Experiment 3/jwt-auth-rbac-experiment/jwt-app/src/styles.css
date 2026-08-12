@@ -14,9 +14,10 @@
 * { box-sizing: border-box; }
 body {
   margin: 0;
-  background: var(--bg) radial-gradient(circle at 20% -10%, #1d4a55aa, transparent 55%) fixed;
-  color: var(--fg);
-  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  min-height: 100vh;
+  color: white;
 }
 .shell { max-width: 1050px; margin: 0 auto; padding: 3rem 1.5rem; }
 .split { display: flex; gap: 3rem; flex-wrap: wrap; align-items: center; min-height: 100vh; }
