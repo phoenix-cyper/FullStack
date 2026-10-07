@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import PostComposer from './PostComposer'
 import PostList from './PostList'
 import GlobalError from './GlobalError'
@@ -10,9 +10,6 @@ function App() {
   const [posts, setPosts] = useState([]);
   const [globalError, setGlobalError] = useState(null);
 
-  useEffect(() => {
-    fetchPosts();
-  }, []);
 
   const fetchPosts = async () => {
     try {
@@ -82,6 +79,9 @@ function App() {
           onPostCreate={handleCreatePost} 
           onError={setGlobalError} 
         />
+        <button className="get-btn" onClick={fetchPosts}>
+  GET ALL POSTS
+</button>
         <PostList 
           posts={posts} 
           onDelete={handleDeletePost} 
